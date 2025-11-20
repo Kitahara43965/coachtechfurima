@@ -1,0 +1,213 @@
+.evaluation-board {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.evaluation-left-block {
+    padding: 20px;
+}
+
+.evaluation-right-block {
+    margin-top: -25px;
+    width: 100%;
+    padding: 5px;
+}
+
+.evaluation-form__button-submit {
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: red;
+    color: #fff;
+    cursor: pointer;
+}
+
+.evaluation-lower-comment-button-blank {
+    margin: 30px 0;
+}
+
+.evaluation-disabled-button {
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #ccc;
+    color: #fff;
+    text-align: center;
+}
+
+.evaluation-custom-file {
+    position: relative;
+    margin-left: 52px;
+}
+
+.evaluation-custom-file input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.evaluation-item-image-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.evaluation-item-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.evaluation-file-upload-commands {
+    margin-top: 3px;
+    display: flex;
+}
+
+.evaluation-item {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+
+.item-table {
+    width: 100px;
+    border-collapse: collapse;
+    text-align: center; /* 👈 テキスト・要素を中央に */
+    vertical-align: middle; /* 👈 縦方向も中央揃え */
+    margin-bottom: 20px;
+}
+
+.comment-count,
+.favorite-count,
+.item-table td,
+.item-table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.svg-small svg {
+    width: 28px;
+    height: auto;
+}
+
+.favorite-count {
+    position: relative;
+    top: 0px;
+    font-size: 14px;
+    color: #333;
+}
+
+.comment-count {
+    position: relative;
+    top: 0px;
+    font-size: 14px;
+    color: #333;
+}
+
+.evaluation-brand {
+    margin-top: -20px;
+}
+
+.evaluation-price-container {
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+.evaluation-price-sign {
+    font-size: 18px;
+    padding: 0px;
+}
+
+.evaluation-price-value {
+    font-size: 28px;
+    padding-bottom: 4px;
+}
+
+.evaluation-price-tax {
+    font-size: 18px;
+    padding: 0px;
+}
+
+.evaluation-detail-column-grid {
+    display: grid;
+    grid-template-columns: auto 1fr; /* 左ラベルは自動幅、右は残り */
+    gap: 5px 20px; /* 行間・列間の間隔 */
+    align-items: start; /* 上揃え */
+}
+
+/* ラベルと値のスタイル */
+.evaluation-label {
+    font-weight: bold;
+}
+
+.evaluation-value span {
+    display: inline-block; /* 横並びにも対応可能 */
+    margin-right: 8px; /* 横に並べる場合の余白 */
+}
+
+.evaluation-category-tag {
+    background-color: #ccc; /* 背景色を灰色に */
+    color: #000; /* 文字色（黒） */
+    border-radius: 1000px; /* 角を丸く */
+    padding: 2px 6px; /* 内側の余白 */
+    margin-right: 4px; /* 横並びの間隔 */
+    font-size: 0.9rem; /* 文字サイズ調整 */
+    display: inline-block; /* 横並び対応 */
+}
+
+.evaluation-commentator-container {
+    display: flex;
+    align-items: center;
+}
+
+.evaluation-commentator-image {
+    align-items: center;
+}
+
+.evaluation-commentator-user {
+    align-items: center;
+    margin-left: 10px;
+}
+
+.evaluation-user-image-container {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.evaluation-user-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ← ここがポイント */
+}
+
+.evaluation-user-image-name {
+    height: 24px;
+    border: 0;
+    color: gray;
+    background-color: rgba(230, 230, 230, 0);
+}

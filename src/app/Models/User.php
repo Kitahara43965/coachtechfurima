@@ -8,37 +8,48 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name','email','password','username','is_filled_with_profile','postcode','address','building','image'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ['password','remember_token'];
+    protected $casts = ['email_verified_at' => 'datetime'];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // 出品/所有商品
+    public function ownedItems()
+    {
+        return $this->belongsToMany(Item::class, 'user_item')
+                    ->wherePivot('type', 'ownership')
+                    ->withTimestamps();
+    }
+
+    // お気に入り商品
+    public function favoriteItems()
+    {
+        return $this->belongsToMany(Item::class, 'user_item')
+                    ->wherePivot('type', 'favorite')
+                    ->withTimestamps();
+    }
+
+    // 購入商品
+    public function purchasedItems(){
+        return $this->belongsToMany(Item::class, 'user_item')
+                ->wherePivot('type', 'purchase')
+                ->withPivot([
+                    'type',
+                    'purchase_quantity',
+                    'price_at_purchase',
+                    'purchased_at',
+                    'purchase_method_id',
+                    'is_filled_with_delivery_address',
+                    'delivery_postcode',
+                    'delivery_address',
+                    'delivery_building',
+                ])
+                ->withTimestamps();
+    }
 }

@@ -1,0 +1,40 @@
+.profile-board {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.profile-custom-file {
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-file-upload-button {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 20px;
+    padding: 8px 14px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background: #fff;
+    color: red;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 18px;
+    text-align: center;
+}
+
+.profile-file-upload-button input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.profile-file-upload-commands {
+    margin-top: 3px;
+    display: flex;
+}

@@ -1,0 +1,30 @@
+.verify-email-board {
+    text-align: center;
+    width: 100%;
+    padding: 0 auto;
+}
+
+.verify-email-block {
+    margin: 80px 0;
+}
+
+.verify-email-text {
+    padding: 0;
+}
+
+.verify-email-button {
+    padding: 10px;
+    margin: 30px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.verify-email-auth-resend-button {
+    text-decoration: none;
+    color: blue;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 16px;
+}

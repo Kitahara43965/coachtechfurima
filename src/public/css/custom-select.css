@@ -1,0 +1,111 @@
+/* カスタムセレクト全体 */
+.custom-select-wrapper {
+    position: relative;
+    width: 100%; /* 任意で調整 */
+}
+
+/* リスト全体 */
+.custom-select-list {
+    position: absolute;
+    top: 0; /* 上端に合わせる */
+    left: 0;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+/* 各項目 */
+.custom-select-item {
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+}
+
+/* 選択時の青いバー */
+.custom-select-item .custom-select-blue-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 99%;
+    height: 75%;
+    background-color: rgb(0, 103, 192);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 4px;
+    display: none; /* デフォルトは非表示 */
+}
+
+/* 選択時に青バー表示 */
+.custom-select-item.selected .custom-select-blue-bar {
+    display: block;
+}
+
+/* テキスト */
+.custom-select-item .custom-select-item-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* hover効果 */
+.custom-select-item:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 選択部分 */
+.custom-select-selected-option {
+    position: relative; /* ::after を配置する基準にする */
+    padding: 5px 30px 5px 10px; /* 右側に余白を作る */
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #fff;
+    text-align: left;
+    line-height: 1.2;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.custom-select-selected-option::after {
+    content: "▼"; /* 下向き三角 */
+    position: absolute;
+    right: 10px; /* 右端からの距離 */
+    top: 50%;
+    transform: translateY(-50%); /* 縦中央に配置 */
+    color: black; /* 白色 */
+    font-size: 12px; /* お好みで調整 */
+    pointer-events: none; /* 三角がクリックを邪魔しないように */
+}
+
+.custom-select-selected-option.disabled {
+    background-color: #eee; /* 無効時の背景色 */
+    color: #999; /* 無効時の文字色 */
+    cursor: not-allowed;
+}
+
+.custom-select-item .custom-select-check-icon {
+    position: relative; /* relativeでもOK */
+    z-index: 2; /* 青バーより前に出す */
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* 選択時のチェックマーク */
+.custom-select-item.selected .custom-select-check-icon::after {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 10px;
+    top: 0;
+    left: 0;
+    z-index: 3; /* 確実に前面 */
+}

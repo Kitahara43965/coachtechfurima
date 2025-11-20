@@ -1,0 +1,214 @@
+.sell-board {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.sell-custom-file {
+    background-color: white;
+    position: relative;
+    margin: 0;
+}
+
+.sell_input--text {
+    position: relative;
+}
+
+.sell_input--text::before {
+    content: "¥";
+    position: absolute;
+    left: 12px; /* ← input内の左端に配置 */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    font-size: 15px;
+    font-weight: bold;
+    pointer-events: none;
+    background: transparent;
+}
+
+.sell_input--text input {
+    padding: 10px 10px 10px 35px; /* ← 左 padding を増やす */
+    font-size: 18px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.sell-item-image-container {
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.sell-item-image-container.large {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    margin: 0;
+    background-color: white;
+    border: transparent;
+    border-radius: 0px;
+}
+
+.sell-item-image {
+    width: 0%;
+    height: 0%;
+    object-fit: cover;
+}
+
+.sell-item-image.large {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-image-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.sell-item-image-name {
+    height: 24px;
+    border: 0;
+    color: gray;
+    background-color: rgba(230, 230, 230, 0);
+}
+
+.sell-file-upload-button-none-container {
+    padding: 10px 40px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.sell-file-upload-button {
+    position: absolute;
+    top: 75px;
+    left: 200px;
+    width: 200px;
+    height: 40px;
+    padding: 8px 14px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background: #fff;
+    color: red;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 15px;
+    text-align: center;
+}
+
+.sell-file-upload-button.none {
+    position: absolute;
+    top: 620px;
+    left: 200px;
+    width: 200px;
+    height: 40px;
+    padding: 8px 14px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background: #fff;
+    color: red;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 15px;
+    text-align: center;
+}
+
+.sell-file-upload-button input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.sell-file-upload-commands {
+    margin-top: 3px;
+    display: flex;
+}
+
+.sell-custom-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.sell-section-borderline {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    text-align: left;
+}
+
+.sell-detail-subtitle {
+    color: gray;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+
+.sell-description-subtitle {
+    color: gray;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.sell-description {
+    background: #fff;
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 5px;
+    text-align: left;
+}
+
+.sell-button {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sell-delete-button-group {
+    position: relative;
+    background-color: white;
+    border: none;
+}
+
+.sell-delete-button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -97px;
+    left: 550px;
+    cursor: pointer;
+}

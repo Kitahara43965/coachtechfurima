@@ -1,0 +1,28 @@
+.register-board {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.register-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.register-form__heading {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register-upper-form-button-blank {
+    margin: 60px 0;
+}
+
+.login__link {
+    margin: 20px;
+    text-align: center;
+}
+
+.register-form-bottom-blank {
+    margin: 30px 0;
+}
