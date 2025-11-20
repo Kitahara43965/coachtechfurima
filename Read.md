@@ -33,8 +33,10 @@ DB_PORT=3306<br>
 DB_DATABASE=laravel_db<br>
 DB_USERNAME=laravel_user<br>
 DB_PASSWORD=laravel_pass<br>
-STRIPE_KEY=pk_test_51SPiHEQSyg9ASGebyCSeAmwImMCKJhyH4KA67OM2Wqiabbs1H3TD86ExSygNgoT2fHMD1M9jHrF1VobzzeU4NMCu00NTU0mHr5{追加}<br>
-STRIPE_SECRET=sk_test_51SPiHEQSyg9ASGebSOYPhtVgeE0C68NJooGaV9fwasEKHSDa6WElqZqEk3lSQrIGmG9ziXbEM7J54yqZ6O1Lpd7s00CvLx32st{追加}<br>
+MAIL_FROM_ADDRESS=noreply@example.com<br>
+{以下の2項目追加}
+STRIPE_KEY=pk_test_51SPiHEQSyg9ASGebyCSeAmwImMCKJhyH4KA67OM2Wqiabbs1H3TD86ExSygNgoT2fHMD1M9jHrF1VobzzeU4NMCu00NTU0mHr5<br>
+STRIPE_SECRET=sk_test_51SPiHEQSyg9ASGebSOYPhtVgeE0C68NJooGaV9fwasEKHSDa6WElqZqEk3lSQrIGmG9ziXbEM7J54yqZ6O1Lpd7s00CvLx32st<br>
 とします。<br>
 (ハ-3) php コンテナ上で<br>
 $ php artisan key:generate<br>
@@ -117,6 +119,7 @@ mailhog v1.0.1<br>
 ユーザー登録：http://localhost/register/<br>
 phpMyAdmin: http://localhost:8080/<br>
 mailhog: http://localhost:8025/<br>
+
 
 
 
