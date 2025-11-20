@@ -110,7 +110,7 @@ mailhog v1.0.1<br>
 
 ## ER 図<br>
 
-<img width="1715" height="1041" alt="Image" src="https://github.com/user-attachments/assets/b9ada149-875b-4c66-a9a3-e8989145f96a" />
+<img width="1715" height="1041" alt="Image" src="https://github.com/user-attachments/assets/3e10b0d9-bb10-4aac-a1e2-c1ce1bcb0635" />
 
 ## URL
 
